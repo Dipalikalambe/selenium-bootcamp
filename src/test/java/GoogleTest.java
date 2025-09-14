@@ -9,7 +9,6 @@ public class GoogleTest {
         WebDriver driver = new ChromeDriver();
         driver.get("https://www.google.com");
         System.out.println("Title name:"+driver.getTitle());
-
     }
 
 }

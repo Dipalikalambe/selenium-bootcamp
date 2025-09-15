@@ -44,6 +44,16 @@ public class WaitsTest {
 
         WebElement message = wait.until(driver -> driver.findElement(By.id("finish")));
         System.out.println("Message (Fluent Wait): " + message.getText());
+        // driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+    }
+    @Test
+    public void implicitWaitDemo(){
+        driver.findElement(By.cssSelector("#start button")).click();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        WebElement msg= driver.findElement(By.id("finish"));
+        System.out.println("GetMessage:"+msg.getText());
+
+
     }
 
     @AfterMethod
